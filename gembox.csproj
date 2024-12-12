@@ -10,5 +10,9 @@
   <ItemGroup>
     <PackageReference Include="GemBox.Document" Version="35.0.1946" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Content Include="*.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content> 
+  </ItemGroup>
 </Project>

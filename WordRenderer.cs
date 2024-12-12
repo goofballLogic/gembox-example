@@ -23,7 +23,8 @@ public partial class WordRenderer
 
         var baseFontSize = 11;
         
-        _doc.DefaultCharacterFormat.FontName = "Arial";
+        FontSettings.FontsBaseDirectory = ".";
+        _doc.DefaultCharacterFormat.FontName = "Montserrat";
         _doc.DefaultCharacterFormat.Size = baseFontSize;
 
         var section = new Section(_doc);
