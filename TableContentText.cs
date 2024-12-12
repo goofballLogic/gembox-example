@@ -1,0 +1,1 @@
+public record TableContentText(string Text, bool IsBoldAndShaded = false, bool IsBold = false);
