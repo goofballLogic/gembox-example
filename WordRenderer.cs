@@ -24,7 +24,10 @@ public partial class WordRenderer
         var baseFontSize = 11;
         
         FontSettings.FontsBaseDirectory = ".";
-        _doc.DefaultCharacterFormat.FontName = "Montserrat";
+        foreach(var x in FontSettings.Fonts) {
+            Console.WriteLine(x);
+        }
+        _doc.DefaultCharacterFormat.FontName = "Roboto";
         _doc.DefaultCharacterFormat.Size = baseFontSize;
 
         var section = new Section(_doc);
@@ -99,7 +102,7 @@ public partial class WordRenderer
     {
         var p = new Paragraph(_doc);
         var line = new Shape(_doc, ShapeType.Rectangle,
-            Layout.Inline(new Size(ParagraphWidth(_doc.Sections[0]), 0.1))
+            Layout.Inline(new Size(ParagraphWidth(_doc.Sections[0]), 1))
         );
         line.Fill.SetSolid(Color.LightGray);
         line.Outline.Fill.SetEmpty();
